@@ -39,45 +39,53 @@ const featuredProducts: Product[] = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8 sm:p-20">
-      {/* Header */}
+    <div className="home-container">
       <Header />
 
-      {/* Main content */}
-      <main className="text-center sm:text-left">
-        <h1 className="text-4xl font-extrabold text-gray-800 mb-6">
-          Bienvenido a la Tienda Chiqui
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Tu lugar para encontrar productos increíbles a precios bajos.
-        </p>
+      <main className="main-content">
+        <div className="hero-section">
+          <div className="particles">
+            {/* Puedes agregar partículas dinámicas aquí con JavaScript */}
+            {[...Array(30)].map((_, i) => (
+              <div 
+                key={i}
+                className="particle"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  width: `${Math.random() * 10 + 5}px`,
+                  height: `${Math.random() * 10 + 5}px`,
+                  animationDelay: `${Math.random() * 2}s`
+                }}
+              />
+            ))}
+          </div>
+          <h1 className="hero-title">Bienvenido a la Tienda Chiki</h1>
+          <p className="hero-subtitle">
+            Tu lugar para encontrar productos increíbles a precios bajos.
+          </p>
+        </div>
 
-        {/* Sección de productos destacados */}
-        <section className="mt-12">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-            Productos Destacados
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section className="featured-products">
+          <h2 className="section-title">Productos Destacados</h2>
+          <div className="products-grid">
             {featuredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-50"
-              >
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="w-full h-40 object-cover rounded-t-xl" // Ajustado el tamaño de la imagen
-                />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">{product.description}</p>
-                  <a
-                    href={`/product/${product.id}`}
-                    className="inline-block text-blue-600 hover:text-blue-800 text-sm"
-                  >
+              <div key={product.id} className="product-card">
+                <div className="image-container">
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="product-image"
+                  />
+                </div>
+                <div className="product-info">
+                  <h3 className="product-name">{product.name}</h3>
+                  <p className="product-description">{product.description}</p>
+                  <a href={`/product/${product.id}`} className="product-link">
                     Ver más
+                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -85,23 +93,18 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="flex justify-center sm:justify-start gap-8 mt-8">
-          <a
-            className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition-colors"
-            href="/products"
-          >
+        <div className="cta-buttons">
+          <a href="/products" className="btn-primary">
             Explorar productos
+            <span className="hover-effect"></span>
           </a>
-          <a
-            className="bg-transparent border-2 border-blue-600 text-blue-600 py-2 px-6 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
-            href="/marketplace"
-          >
+          <a href="/marketplace" className="btn-secondary">
             Ir al Marketplace
+            <span className="hover-effect"></span>
           </a>
         </div>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

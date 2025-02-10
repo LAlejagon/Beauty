@@ -74,6 +74,10 @@ const Header: React.FC = () => {
               <FaUserPlus className="icon" />
               <span>Register</span>
             </Link>
+            <Link href="/marketplace" className="nav-link-button">
+              <FaUserPlus className="icon" />
+              <span>Marketplace</span>
+            </Link>
           </>
         )}
       </div>

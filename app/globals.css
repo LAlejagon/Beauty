@@ -36,14 +36,14 @@ body {
   border-radius: 16px;
   box-shadow: var(--shadow);
   width: 100%;
-  max-width: 380px; /* Asegura que el formulario no se estire mucho */
+  max-width: 380px;
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Ajustamos el tamaño de los inputs para que no sean tan largos */
+/* Inputs del formulario */
 .register-form input {
-  width: 90%; /* Reduce el ancho a 90% */
+  width: 90%;
   padding: 14px;
   margin: 12px 0;
   border: 2px solid var(--primary-color);
@@ -53,7 +53,6 @@ body {
   transition: var(--transition);
 }
 
-/* Establecemos un color de enfoque más suave */
 .register-form input:focus {
   border-color: var(--primary-hover-color);
   box-shadow: 0 0 8px rgba(108, 154, 139, 0.4);
@@ -61,7 +60,7 @@ body {
 
 /* Botón */
 .register-form button {
-  width: 90%; /* El mismo ancho para el botón */
+  width: 90%;
   padding: 14px;
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -73,9 +72,8 @@ body {
   transition: var(--transition);
 }
 
-/* Para el color de fondo, puedes probar un verde más suave para el hover */
 .register-form button:hover {
-  background-color: #4a7c66; /* Nuevo verde más suave */
+  background-color: #4a7c66;
   transform: translateY(-2px);
 }
 
@@ -117,14 +115,13 @@ body {
   border-radius: 16px;
   box-shadow: var(--shadow);
   width: 100%;
-  max-width: 380px; /* Asegura que el formulario no se estire mucho */
+  max-width: 380px;
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Ajustamos el tamaño de los inputs para que no sean tan largos */
 .login-form input {
-  width: 90%; /* Reduce el ancho a 90% */
+  width: 90%;
   padding: 14px;
   margin: 12px 0;
   border: 2px solid var(--primary-color);
@@ -134,15 +131,13 @@ body {
   transition: var(--transition);
 }
 
-/* Establecemos un color de enfoque más suave */
 .login-form input:focus {
   border-color: var(--primary-hover-color);
   box-shadow: 0 0 8px rgba(108, 154, 139, 0.4);
 }
 
-/* Botón */
 .login-form button {
-  width: 90%; /* El mismo ancho para el botón */
+  width: 90%;
   padding: 14px;
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -154,13 +149,11 @@ body {
   transition: var(--transition);
 }
 
-/* Para el color de fondo, puedes probar un verde más suave para el hover */
 .login-form button:hover {
-  background-color: #4a7c66; /* Nuevo verde más suave */
+  background-color: #4a7c66;
   transform: translateY(-2px);
 }
 
-/* Enlace de registro */
 .register-link {
   margin-top: 15px;
 }
@@ -320,7 +313,7 @@ footer .footer-links a {
 }
 
 footer .footer-links a:hover {
-  color: #3182CE; /* Color de hover para enlaces */
+  color: #3182CE;
 }
 
 footer .footer-social {
@@ -343,7 +336,7 @@ footer .footer-social a:hover {
 footer .footer-bottom {
   margin-top: 3rem;
   font-size: 0.875rem;
-  color: #CBD5E0; /* Color suave para el texto de derechos */
+  color: #CBD5E0;
 }
 
 footer .footer-bottom a {
@@ -354,7 +347,6 @@ footer .footer-bottom a {
 footer .footer-bottom a:hover {
   color: #3182CE;
 }
-
 
 /* 🐾 Animación de fade-in */
 @keyframes fadeIn {
@@ -372,35 +364,557 @@ footer .footer-bottom a:hover {
 .grid div {
   background-color: #fff;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  /* No modificar el tamaño del texto */
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: var(--transition);
 }
 
 .grid div:hover {
-  transform: scale(1.05); /* Efecto de aumento del cuadro */
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.grid div h3, .grid div p {
-  transition: transform 0.3s ease, color 0.3s ease;
-  /* Esto asegura que el texto no cambiará su tamaño ni color al hacer hover */
+/* 🛍️ Marketplace Styles */
+.marketplace-container {
+  background-color: var(--background-color);
+  padding: 2rem;
 }
 
-/* Aseguramos que el texto se mantenga nítido */
-.grid div h3, .grid div p {
-  font-size: 1rem;
-  color: #4a5568; /* Mantener color constante */
+/* Main Layout */
+.main-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.grid div:hover h3, .grid div:hover p {
-  color: #2b6cb0;  /* Cambio de color del texto al hacer hover */
+/* Sidebar */
+.sidebar-filter {
+  background: var(--white-color);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 250px;
+  height: fit-content;
 }
 
-.grid div img {
+.sidebar-filter h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-list li {
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.category-list li:hover {
+  background: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.category-list li[data-active="true"] {
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+/* Product Grid */
+.products-grid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--white-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Para mantener las proporciones de la imagen */
+  object-fit: cover;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-price {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+/* Cart Styles */
+.cart-sidebar {
+  background: var(--white-color);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 300px;
+  height: fit-content;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-total {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover-color);
+  transform: translateY(-2px);
+}
+
+.btn-remove {
+  color: #ff4444;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.btn-remove:hover {
+  background: #ffeeee;
+  color: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .sidebar-filter,
+  .cart-sidebar {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🏠 Home Page Styles - Versión Avanzada */
+.home-container {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  text-align: center;
+  margin: -2rem -2rem 4rem;
+  padding: 8rem 2rem 4rem;
+  background: var(--gradient-bg);
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    rgba(108, 154, 139, 0.2) 0%,
+    rgba(241, 198, 162, 0.1) 100%);
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: var(--white-color);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+  font-weight: 300;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.featured-products {
+  margin: 6rem 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.product-card {
+  background: var(--white-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  position: relative;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-15deg);
+  transition: left 0.6s ease;
+}
+
+.product-card:hover::before {
+  left: 150%;
+}
+
+.product-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--secondary-color);
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 2rem;
+  position: relative;
+  background: var(--white-color);
+}
+
+.product-name {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(108, 154, 139, 0.1);
+}
+
+.product-link:hover {
+  color: var(--white-color);
+  background: var(--primary-color);
+  transform: translateX(8px);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 5rem 0;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 1.25rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--transition);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.btn-primary:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 154, 139, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 1.25rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary:hover {
+  color: var(--white-color);
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 154, 139, 0.3);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 6rem 2rem 3rem;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    animation: none;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cta-buttons {
+    margin: 3rem 0;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Efecto de Partículas en el Hero */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes particle {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+/* Mejoras adicionales para el efecto de partículas */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: particle 6s infinite linear;
+}
+
+@keyframes particle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Mejoras en los enlaces */
+.link-arrow {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.product-link:hover .link-arrow {
+  transform: translateX(5px);
+}
+
+/* Efecto de hover en botones */
+.hover-effect {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transform: skewX(-15deg);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover .hover-effect,
+.btn-secondary:hover .hover-effect {
+  left: 100%;
+}
 

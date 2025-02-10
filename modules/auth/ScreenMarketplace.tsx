@@ -68,8 +68,8 @@ export default function ScreenMarketplace() {
             .map((product) => (
               <div key={product.id} className="product-card">
                 <img 
-                  src="/placeholder-pet.jpg" 
-                  alt={product.name} 
+                  src="/placeholder-pet.jpg"  //Aca deben ir las imagenes
+                  alt={product.name}  
                   className="product-image" 
                 />
                 <div className="product-info">

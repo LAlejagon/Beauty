@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   useEffect(() => {
     const authStatus = localStorage.getItem('isAuthenticated');
     setIsAuthenticated(authStatus === 'true'); // Asigna el estado de autenticación
-  }, []);
+  }, []); // Este useEffect solo se ejecuta una vez cuando el componente se monta
 
   // Función para cerrar sesión
   const handleLogout = () => {
@@ -74,7 +74,6 @@ const Header: React.FC = () => {
               <FaUserPlus className="icon" />
               <span>Register</span>
             </Link>
-            
           </>
         )}
       </div>

@@ -1,13 +1,15 @@
+// app/auth/register/layout.tsx
 import Header from "@/components/Header";
 
-export default function AuthLayout({
-  children
+export default function RootLayout({
+  children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <main className="h-[100dvh] flex justify-center items-center bg-slate-100">
+    <div className="h-screen flex flex-col bg-slate-100">
+      <Header />
+      <main className="flex-grow flex justify-center items-center">
         {children}
       </main>
     </div>

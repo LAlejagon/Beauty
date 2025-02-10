@@ -34,51 +34,49 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <nav className="navbar">
-        {/* Logo */}
-        <Link href="/" className="logo">
-          <span className="text-2xl">🍅</span>
-          <span>TIENDA CHIKI</span>
+      {/* Logo (Título) */}
+      <div className="logo">
+        <span className="text-3xl">🍅</span>
+        <span className="site-title">TIENDA CHIKI</span>
+      </div>
+
+      {/* Menú de navegación */}
+      <div className="nav-links">
+        {/* Enlaces principales */}
+        <Link href="/" className="nav-link">
+          <FaHome className="icon" />
+          <span>Home</span>
+        </Link>
+        <Link href="/marketplace" className="nav-link">
+          <FaShoppingCart className="icon" />
+          <span>Marketplace</span>
         </Link>
 
-        {/* Menú de navegación */}
-        <div className="nav-links">
-          {/* Enlaces principales */}
-          <Link href="/" className="nav-link">
-            <FaHome className="icon" />
-            <span>Home</span>
-          </Link>
-          <Link href="/marketplace" className="nav-link">
-            <FaShoppingCart className="icon" />
-            <span>Marketplace</span>
-          </Link>
-      
-          {/* Menú de usuario */}
-          {isAuthenticated ? (
-            <>
-              <Link href="/profile" className="nav-link">
-                <FaUser className="icon" />
-                <span>Perfil</span>
-              </Link>
-              <button onClick={handleLogout} className="nav-link-button">
-                <FaSignOutAlt className="icon" />
-                <span>Cerrar Sesión</span>
-              </button>
-            </>
-          ) : (
-            <>
-              <Link href="/login" className="nav-link-button">
-                <FaUser className="icon" />
-                <span>Login</span>
-              </Link>
-              <Link href="/register" className="nav-link-button">
-                <FaUserPlus className="icon" />
-                <span>Register</span>
-              </Link>
-            </>
-          )}
-        </div>
-      </nav>
+        {/* Menú de usuario */}
+        {isAuthenticated ? (
+          <>
+            <Link href="/profile" className="nav-link">
+              <FaUser className="icon" />
+              <span>Perfil</span>
+            </Link>
+            <button onClick={handleLogout} className="nav-link-button">
+              <FaSignOutAlt className="icon" />
+              <span>Cerrar Sesión</span>
+            </button>
+          </>
+        ) : (
+          <>
+            <Link href="/login" className="nav-link-button">
+              <FaUser className="icon" />
+              <span>Login</span>
+            </Link>
+            <Link href="/register" className="nav-link-button">
+              <FaUserPlus className="icon" />
+              <span>Register</span>
+            </Link>
+          </>
+        )}
+      </div>
     </header>
   );
 };

@@ -67,7 +67,7 @@ export default function ScreenLogin() {
           {/* Sign Up Link */}
           <div className="register-link">
             <span>¿No tienes cuenta?</span>
-            <Link href="/Screenregistro">Regístrate</Link>
+            <Link href="/registro">Regístrate</Link>
           </div>
         </div>
       </div>

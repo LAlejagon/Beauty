@@ -101,7 +101,7 @@ export default function ScreenRegister() {
         {/* Login Link */}
         <div className="login-link">
           <span>¿Ya tienes una cuenta?</span>
-          <Link href="/Screenregistro">Regístrate</Link>
+          <Link href="/login">Inicia Sesion</Link>
         </div>
       </div>
     </div>

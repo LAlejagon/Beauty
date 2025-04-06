@@ -1,5 +1,5 @@
 // app/auth/register/layout.tsx
-import Header from "@/components/Header";
+import Header from "@/components/molecules/Header";
 
 export default function RootLayout({
   children,

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ScreenLogin from "@/modules/auth/Screenlogin";
+//import ScreenLogin from "@/modules/auth/Screenlogin";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function LoginPage() {
-  return <ScreenLogin />;
+  //return <ScreenLogin />;
 }

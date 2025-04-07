@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tienda Chiki",
-    template: "%s | Tienda Chiki"
+    default: "Tienda Beauty",
+    template: "%s | Tienda Beauty"
   },
   description: "Compra los mejores productos en nuestra tienda online",
 };

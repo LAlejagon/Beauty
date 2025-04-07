@@ -20,7 +20,6 @@ const GeneralPage: React.FC = () => {
         <Link href="/marketplace/accesorios" className="hover:text-pink-700">Accesorios</Link>
       </nav>
 
-      {/* Banner principal */}
       <section className="relative mt-6 px-4">
         <img
           src="https://res.cloudinary.com/dajaq7tej/image/upload/v1743970574/maquillaje_nqghbf.png"

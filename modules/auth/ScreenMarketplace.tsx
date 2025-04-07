@@ -2,11 +2,11 @@
 import ScreenMarketplace from "@/modules/auth/ScreenMarketplace"; 
 
 const productosOjos = [
-  {
-    title: "Paleta Sombras Cuadrado SAS",
-    price: "$11.900,00",
-    imageUrl: "https://link-de-tu-imagen.com/imagen1.jpg",
-  },
+    {
+      title: "Paleta Sombras Cuadrado SAS",
+      price: "$2.900,00",
+      imageUrl: "https://res.cloudinary.com/dajaq7tej/image/upload/v1743989676/paleta_rqynds.jpg" // Corregido el formato
+    },
   {
     title: "Paleta Sombras Círculo SAS",
     price: "$11.900,00",

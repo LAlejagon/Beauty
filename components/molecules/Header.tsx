@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+
 import { FaUser, FaShoppingCart, FaMapMarkerAlt, FaHeart, FaBox, FaSearch } from "react-icons/fa";
 
 const Header: React.FC = () => {
@@ -32,7 +34,9 @@ const Header: React.FC = () => {
             />
             <FaSearch className="absolute top-2 left-2 text-gray-400" />
           </div>
-          <FaUser className="text-white hover:text-gray-300 cursor-pointer" />
+          <Link href="/login">
+         <FaUser className="text-white hover:text-gray-300 cursor-pointer" />
+           </Link>
           <FaShoppingCart className="text-white hover:text-gray-300 cursor-pointer" />
         </div>
       </div>

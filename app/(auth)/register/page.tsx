@@ -1,15 +1,14 @@
-// app/auth/register/page.tsx
 import { Metadata } from "next";
-import ScreenRegister from "@/modules/auth/Screenregistro";
+import ScreenRegistro from "@/modules/auth/Screenregistro";
 
 export const metadata: Metadata = {
-  title: "Register",
-  description: "Regístrate para crear una nueva cuenta",
+  title: "Registro",
+  description: "Crea tu cuenta en Tienda Chiki",
   alternates: {
-    canonical: "https://mydomain.com/register",
+    canonical: "https://alejabeauty.com/registro",
   },
 };
 
-export default function RegisterPage() {
-  return <ScreenRegister />;
+export default function RegistroPage() {
+  return <ScreenRegistro />;
 }

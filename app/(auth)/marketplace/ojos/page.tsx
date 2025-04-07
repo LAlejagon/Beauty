@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import ScreenMarketplace from "@/modules/auth/ScreenMarketplace";
+import Screenojos from "@/modules/auth/Screenojos";
+import Screenlabios from "@/modules/auth/Screenlabios"
 
 
 export const metadata: Metadata = {
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function OjosPage() {
-  return <ScreenMarketplace />;
+  return <Screenojos />;
 }

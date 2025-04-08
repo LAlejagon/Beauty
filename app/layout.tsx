@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default: "Tienda Beauty",
-    template: "%s | Tienda Beauty"
+    template: "%s | Tienda Beauty",
   },
   description: "Compra los mejores productos en nuestra tienda online",
 };
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 text-gray-900 min-h-screen flex items-center justify-center`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 text-gray-900 min-h-screen`}
       >
         {children}
       </body>

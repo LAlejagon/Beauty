@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/ofertas" className="hover:text-rose-600 transition-colors">
+            <Link href="#" className="hover:text-rose-600 transition-colors">
               Ofertas Especiales
             </Link>
             <Link href="/blog" className="hover:text-rose-600 transition-colors">

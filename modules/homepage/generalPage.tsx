@@ -17,7 +17,7 @@ const GeneralPage: React.FC = () => {
     if (pathname.includes('cuidado-facial')) return 'cuidado-facial';
     if (pathname.includes('corporal')) return 'corporal';
     if (pathname.includes('accesorios')) return 'accesorios';
-    return null; // Ninguna activa en la página general
+    return null; 
   };
 
   const activeCategory = getActiveCategory();
@@ -72,7 +72,6 @@ const GeneralPage: React.FC = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="relative mt-6 px-4 container mx-auto">
         <div className="relative rounded-xl overflow-hidden shadow-md">
           <img

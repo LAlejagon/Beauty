@@ -18,7 +18,7 @@ export default function RegisterPage() {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
         {/* Header */}
         <div className="bg-black p-6 text-center">
-          <h1 className="text-2xl font-bold text-white">Tienda Chiki</h1>
+          <h1 className="text-2xl font-bold text-white">Tienda Beauty</h1>
           <p className="text-gray-300 mt-1 text-sm">Crea tu nueva cuenta</p>
         </div>
 

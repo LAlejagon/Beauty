@@ -6,7 +6,6 @@ import Footer from "@/components/molecules/Footer";
 import { Eye, Smile, Star, Bath, SprayCan, Gem, Heart, ShoppingBag, ChevronRight } from "lucide-react";
 import api from "@/utils/api";
 
-// Definición de tipos
 type Product = {
   id: number;
   name: string;

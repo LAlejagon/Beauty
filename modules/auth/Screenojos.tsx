@@ -138,10 +138,10 @@ const OjosPage = () => {
         setCategory(response.data.category);
         setProducts(response.data.products.map((product: any) => ({
           ...product,
-          // Añadir propiedades opcionales para UI
+
           isNew: Math.random() > 0.7,
           isBestSeller: Math.random() > 0.7,
-          rating: 4 + Math.random() // Rating aleatorio entre 4 y 5
+          rating: 4 + Math.random() 
         })));
       } catch (err) {
         setError('Error al cargar los productos');

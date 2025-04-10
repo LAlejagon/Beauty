@@ -6,7 +6,6 @@ import Footer from "@/components/molecules/Footer";
 import { Eye, Smile, Star, Bath, SprayCan, Gem, Heart, ShoppingBag, ChevronRight } from "lucide-react";
 import api from "@/utils/api";
 
-// Definición de tipos
 type Product = {
   id: number;
   name: string;
@@ -134,15 +133,15 @@ const Accesoriospage = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        // Obtener datos de la categoría y productos
+        
         const response = await api.get('/categories/accesorios/products');
         setCategory(response.data.category);
         setProducts(response.data.products.map((product: any) => ({
           ...product,
-          // Añadir propiedades opcionales para UI
+
           isNew: Math.random() > 0.7,
           isBestSeller: Math.random() > 0.7,
-          rating: 4 + Math.random() // Rating aleatorio entre 4 y 5
+          rating: 4 + Math.random() 
         })));
       } catch (err) {
         setError('Error al cargar los productos');

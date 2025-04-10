@@ -23,7 +23,6 @@ export default function RegisterPage() {
         email,
         password
       });
-      // Redirige a login con parámetro de registro exitoso
       router.push('/login?registered=true');
     } catch (err: any) {
       setError(err.response?.data?.message || 'Error al registrar usuario');
@@ -42,7 +41,6 @@ export default function RegisterPage() {
             <p className="text-pink-100 mt-1 text-sm">Crea tu nueva cuenta</p>
           </div>
 
-          {/* Formulario */}
           <div className="p-8">
             {error && (
               <div className="mb-4 bg-red-50 border-l-4 border-red-500 p-3 rounded">

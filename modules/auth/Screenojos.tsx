@@ -25,13 +25,14 @@ type Category = {
 };
 
 const CATEGORIES = [
-  { href: "/ojos", Icon: Eye, text: "Ojos" },
-  { href: "/labios", Icon: Smile, text: "Labios" },
-  { href: "/rostro", Icon: Star, text: "Rostro" },
-  { href: "/cuidado-facial", Icon: SprayCan, text: "Cuidado Facial" },
-  { href: "/cuidado-corporal", Icon: Bath, text: "Corporal" },
-  { href: "/accesorios", Icon: Gem, text: "Accesorios" }
+  { href: "/marketplace/ojos", Icon: Eye, text: "Ojos" },
+  { href: "/marketplace/labios", Icon: Smile, text: "Labios" },
+  { href: "/marketplace/rostro", Icon: Star, text: "Rostro" },
+  { href: "/marketplace/cuidado-facial", Icon: SprayCan, text: "Cuidado Facial" },
+  { href: "/marketplace/cuidado-corporal", Icon: Bath, text: "Corporal" },
+  { href: "/marketplace/accesorios", Icon: Gem, text: "Accesorios" }
 ];
+
 
 const CategoryNavigation = () => {
   return (

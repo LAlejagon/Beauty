@@ -3,7 +3,7 @@ import ScreenRegistro from "@/modules/auth/Screenregistro";
 
 export const metadata: Metadata = {
   title: "Registro",
-  description: "Crea tu cuenta en Tienda Chiki",
+  description: "Crea tu cuenta en Tienda Beauty",
   alternates: {
     canonical: "https://alejabeauty.com/registro",
   },

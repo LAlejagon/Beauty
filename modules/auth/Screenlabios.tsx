@@ -25,12 +25,12 @@ type Category = {
 };
 
 const CATEGORIES = [
+  { href: "/marketplace/accesorios", Icon: Gem, text: "Accesorios" },
   { href: "/marketplace/ojos", Icon: Eye, text: "Ojos" },
   { href: "/marketplace/labios", Icon: Smile, text: "Labios" },
   { href: "/marketplace/rostro", Icon: Star, text: "Rostro" },
   { href: "/marketplace/cuidado-facial", Icon: SprayCan, text: "Cuidado Facial" },
   { href: "/marketplace/cuidado-corporal", Icon: Bath, text: "Corporal" },
-  { href: "/marketplace/accesorios", Icon: Gem, text: "Accesorios" }
 ];
 
 

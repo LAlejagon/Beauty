@@ -6,17 +6,17 @@ import Header from "@/components/molecules/Header";
 import Footer from "@/components/molecules/Footer";
 import { Truck, CreditCard, Sparkles, Eye, Smile, Star, Bath, SprayCan, Gem } from "lucide-react";
 
+
 const GeneralPage: React.FC = () => {
   const pathname = usePathname();
-
-  // Determina qué categoría está activa basada en la ruta actual
+  
   const getActiveCategory = () => {
+    if (pathname.includes('accesorios')) return 'accesorios';
     if (pathname.includes('ojos')) return 'ojos';
     if (pathname.includes('labios')) return 'labios';
     if (pathname.includes('rostro')) return 'rostro';
     if (pathname.includes('cuidado-facial')) return 'cuidado-facial';
     if (pathname.includes('corporal')) return 'corporal';
-    if (pathname.includes('accesorios')) return 'accesorios';
     return null; 
   };
 
@@ -25,6 +25,7 @@ const GeneralPage: React.FC = () => {
   return (
     <div className="font-sans bg-gray-50 min-h-screen text-gray-800">
       <Header />
+     
 
       {/* Navegación con categoría activa dinámica */}
       <nav className="bg-white border-b border-gray-100 sticky top-0 z-20">
@@ -81,13 +82,13 @@ const GeneralPage: React.FC = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent flex items-center justify-center text-center">
             <div className="text-white p-6 max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Compra y Paga a Cuotas</h2>
-              <p className="text-lg mb-6 mx-auto max-w-lg">Con Addi o tu método de pago favorito</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">BIENVENIDOS A ALEJA BEAUTY</h2>
+              <p className="text-lg mb-6 mx-auto max-w-lg">En nuestra tienda encontrarás productos de maquillaje de alta calidad, que realzan tu belleza y cuidan de tu salud.</p>
               <Link 
-                href="/marketplace" 
+                href="/register" 
                 className="inline-flex items-center bg-white text-pink-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-full transition duration-300"
               >
-                ¡Compra Aquí!
+                ¡registate ya!
               </Link>
             </div>
           </div>
@@ -120,7 +121,6 @@ const GeneralPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Sección Newsletter */}
       <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto bg-white rounded-xl p-8 shadow-sm text-center">

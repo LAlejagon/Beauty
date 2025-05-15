@@ -1,35 +1,26 @@
-'use client'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
-import api from '@/utils/api'
+'use client';
 
-export default function LoginPage() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const router = useRouter()
+import Link from 'next/link';
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
+interface ScreenLoginProps {
+  email: string;
+  setEmail: (value: string) => void;
+  password: string;
+  setPassword: (value: string) => void;
+  error: string;
+  loading: boolean;
+  handleSubmit: (e: React.FormEvent) => void;
+}
 
-    try {
-      const response = await api.post('/auth/login', {
-        email,
-        password
-      })
-      localStorage.setItem('token', response.data.token)
-      router.push('/')
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Error al iniciar sesión')
-    } finally {
-      setLoading(false)
-    }
-  }
-
+export default function ScreenLogin({
+  email,
+  setEmail,
+  password,
+  setPassword,
+  error,
+  loading,
+  handleSubmit
+}: ScreenLoginProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md">
@@ -132,5 +123,5 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

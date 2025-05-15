@@ -1,0 +1,20 @@
+{
+  "Header": {
+    "logoAlt": "Aleja Beauty Logo",
+    "brandName": "ALEJA",
+    "brandSubname": "BEAUTY",
+    "searchPlaceholder": "Search products...",
+    "searchPlaceholderMobile": "Search...",
+    "spanish": "Spanish",
+    "english": "English",
+    "accountAria": "My account",
+    "myAccount": "My Account",
+    "cartAria": "Shopping cart",
+    "menuAria": "Toggle menu",
+    "catalog": "Catalog",
+    "wholesale": "Wholesale",
+    "offers": "Special Offers",
+    "contact": "Contact Us",
+    "language": "Language"
+  }
+}
